@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embedding Using iframe and Object</title>
+
+  <style>
+    iframe{
+      border : none;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>Embedding using iframe and Object</h1>
+
+  <h2>Embedding youtube video</h2>
+  <!-- embedding youtube video -->
+  <iframe id="frameVideo" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+
+  <h2>Embedding maps</h2>
+  <!-- embedding maps -->
+  <iframe id="frameMap" src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+  <h2>Embedding other webpage</h2>
+  <iframe id="frameWeb" src=""
+          width="100%" height="250" allowfullscreen sandbox>
+    <p>
+      <a href="/en-US/docs/Glossary">
+         Fallback link for browsers that don't support iframes
+      </a>
+    </p>
+  </iframe>
+
+  <h2>Embedding PDF Document using Object</h2>
+  <object data="assets/mypdf.pdf" type="application/pdf"
+        width="800" height="1200">
+  <p>You don't have a PDF plugin, but you can
+    <a href="assets/mypdf.pdf">download the PDF file.
+    </a>
+  </p>
+</object>
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- javascript -->
+  <script>
+    // kasih event kalo window / dokumen nya sudah beres di load
+    window.onload = function(){
+      
+      let frameVideo = document.getElementById('frameVideo');
+      let frameMap = document.getElementById('frameMap');
+      let frameWeb = document.getElementById('frameWeb');
+
+      frameVideo.setAttribute('src', 'https://www.youtube.com/embed/H8su-_BqvVM');
+
+      frameMap.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398.1968257990964!2d110.20345378456872!3d-7.607824025827968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cf009a7d697%3A0xdd34334744dc3cb!2sBorobudur%20Temple!5e0!3m2!1sen!2sid!4v1643908953026!5m2!1sen!2sid');
+
+      frameWeb.setAttribute('src', 'https://developer.mozilla.org/en-US/docs/Glossary');
+
+
+
+    }
+  </script>
+  
+</body>
+</html>

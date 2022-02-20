@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Advanced Features and Accessibility</title>
+  <style>
+    table, th, td{
+      border-collapse: collapse;
+      border: 1px solid black;
+      margin: 0;
+      padding: 5px;
+    }
+    *{
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Table Advanced Features and Accessibility</h1>
+  <table>
+    <caption>Data Mahasiswa Teknik</caption>
+    <thead>
+      <tr>
+        <th scope="col">NIM</th>
+        <th scope="col">Nama</th>
+        <th scope="col">Jurusan</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>123456</td>
+        <td>Yunus Febriansyah</td>
+        <td rowspan="2">Informatika</td>
+      </tr>
+      <tr>
+        <td>234567</td>
+        <td>Bagus Pangestu</td>
+      </tr>
+      <tr>
+        <td>345678</td>
+        <td>Aldi Prasetyo</td>
+        <td>Teknologi Informasi</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <th colspan="2">Banyak Mahasiswa</th>
+        <td>3</td>
+      </tr>
+    </tfoot>
+
+  </table>
+  
+</body>
+</html>

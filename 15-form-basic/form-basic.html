@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Basic</title>
+
+    <style>
+    * {
+      font-family: sans-serif;
+    }
+    </style>
+
+  </head>
+  <body>
+
+    <h1>Form Basic</h1>
+
+    <form action="" method="get" enctype="multipart/form-data">
+
+      <label for="nama">Nama</label>
+      <input type="text" name="nama" autofocus autocomplete="off" placeholder="Isikan nama anda" required id="nama">
+
+      <br>
+      <br>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" maxlength="100" placeholder="Isikan email anda" value="yunus@gmail.com">
+      <br>
+      <br>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="Isikan password anda" minlength="8">
+      <br>
+      <br>
+      <label>Jenis Kelamin</label>
+      <input type="radio" value="laki" name="jk" id="laki"><label for="laki">Laki-laki</label>
+      <input type="radio" name="jk" id="perempuan"><label for="perempuan">Perempuan</label>
+      <br>
+      <br>
+
+      <label for="ttl">Tanggal Lahir</label>
+      <input type="date" id="ttl">
+      <br>
+      
+      <br>
+      <p>Hobi</p>
+      <input type="checkbox" name="hobi" id="ngoding"><label for="ngoding">Ngoding</label>
+      <input type="checkbox" name="hobi" id="desain"><label for="desain">Desain</label>
+      <br>
+      
+      <br>
+      <p>Foto Profil</p>
+      <input type="file" multiple>
+
+      <br>
+      <br>
+
+      <label for="agama">Agama</label>
+      <br>
+      <select id="agama" multiple required>
+        <option value="a" selected>A</option>
+        <option value="b">B</option>
+        <option>C</option>
+        <option>D</option>
+      </select>
+
+      <br><br>
+      <label for="alamat">Alamat</label>
+      <br>
+      <textarea name="alamat" id="alamat" rows="3" placeholder="Isi alamat anda"></textarea>
+
+      
+      <br>
+      <br>
+      <br>
+      <button type="submit">Kirim</button>
+      <button type="reset">Reset</button>
+      <button type="button">Button</button>
+
+
+
+
+    </form>
+
+  </body>
+</html>

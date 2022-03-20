@@ -1,0 +1,61 @@
+h1 {
+  color: red;
+}
+
+p, li {
+  color: green;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.special {
+  font-weight: bold;
+}
+
+li.special, span.special {
+  color: purple;
+}
+
+li em {
+  color: skyblue;
+}
+
+div.container p {
+  color: pink;
+}
+
+h1 + p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+a{
+  color: blue;
+}
+
+a:link {
+  color: pink;
+}
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+a:active{
+  color: purple;
+}
+
+
+
+
+

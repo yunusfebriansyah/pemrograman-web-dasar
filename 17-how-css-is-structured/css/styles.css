@@ -1,0 +1,46 @@
+/* Create your test CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('style2.css');
+
+h1, h2 {
+  font-weight: 700;
+}
+
+.container p { color: white; }
+
+.paragraf { color: blue; }
+
+#paragraf {
+  color: green;
+  font-style: italic;
+}
+
+
+p { color: skyblue; }
+
+.container {
+  /* background-color: rgba(255, 0, 0, 0.3); */
+  /* padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px; */
+  padding: 40px 10px 100px 20px;
+  width: calc(90% - 50px);
+  text-align: justify;
+  background-image: url('https://images.unsplash.com/photo-1648138754672-7992f01f6f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+/* 
+elemen mana {
+  ubah style : jadi apa;
+}
+
+selector {
+  property : value;
+}
+*/
+
+/*boleh satu baris*/

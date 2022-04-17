@@ -1,0 +1,32 @@
+h1, .special {
+  color: blue;
+}
+
+
+a.link{
+  background-color: #acacac;
+}
+
+a:hover{
+  color: red;
+}
+
+p.last-description:hover{
+  background-color: rgb(182, 15, 182);
+  color: white;
+}
+
+p#special::first-line {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+article > p{
+  background-color: yellow;
+}
+
+h1 ~ p {
+  font-weight: bold;
+}
+
+

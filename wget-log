@@ -1,0 +1,3 @@
+--2022-05-18 18:03:06--  (try: 2)  https://api.github.com/repos/ohmyzsh/ohmyzsh/commits/master
+Connecting to api.github.com (api.github.com)|20.205.243.168|:443... connected.
+Unable to establish SSL connection.

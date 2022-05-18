@@ -1,0 +1,24 @@
+span {
+  display: inline-block;
+  background: rgb(255, 109, 109);
+  padding: 5px 15px;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+div {
+  border: 3px solid #000;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.box-1 {
+  width: 400px;
+}
+
+.box-2 {
+  writing-mode: vertical-rl;
+  height: 200px;
+}
+

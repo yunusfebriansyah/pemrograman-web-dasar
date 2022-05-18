@@ -1,0 +1,94 @@
+div {
+  width: 24%;
+  height: 270px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 270px;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+}
+
+
+
+.box-1 {
+  background-color: #4287F5;
+  background-image: url(star.png);
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+.box-2, .box-3, .box-4 {
+  background-image: url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-image: url(https://images.unsplash.com/photo-1651133806980-7c1f17fb7053?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+  background-position: center;
+  background-size: cover;
+} /* alpha 50% */
+
+.box-2 { background-color: #4287F580; }
+.box-3 { background-color: rgb(66, 135, 245); }
+.box-4 { background-color: rgba(66, 135, 245, 0.5); }
+
+.box-1 {
+  background-image:
+  url(star.png),
+  linear-gradient(to right, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0)),
+  url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-position: right center, left, center;
+  background-size: 200px auto, cover, cover;
+}
+
+
+/* .box-2 {
+  background-image: linear-gradient(#e66465, #9198e5);
+}
+.box-3 {
+  background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+.box-4 {
+  background-image: linear-gradient(to left bottom, #e66465, #9198e5 50%);
+} */
+
+
+
+body { height: 1000px; }
+.box-2 {
+  background-attachment: scroll;
+}
+.box-3 {
+  background-attachment: fixed;
+}
+.box-4 {
+  background-attachment: local;
+}
+
+
+
+/* .box-1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 40px;
+}
+.box-2 { border-radius: 10px 50px; }
+.box-3 { border-radius: 10px 30px 50px; }
+.box-4 { border-radius: 10px 30px 40px 100px; } */
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,7 @@
 <?php
   require_once 'config.php';
-  $recipes = getRecipes();
+  $recipes = getAllRecipes();
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,30 +28,28 @@
       </div>
     </nav>
     <!-- end navbar -->
+
     <div class="container">
 
       <!-- content -->
-      <h1>Semua Resep Terbaik Untuk Kamu</h1>
-
-      <div class="row">
-        <?php foreach ($recipes as $recipe) : ?>
-        <div class="col-6 col-md-4 col-lg-3 gy-4">
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="card-img-top" alt="Kuliner">
+      <h1 class="my-3">Semua Resep Terbaik Untuk Kamu</h1>
+      <div class="row gy-4">
+        <?php foreach($recipes as $recipe) : ?>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card border-0 shadow">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="<?= $recipe['title'] ?>">
             <div class="card-body">
-              <h2 class="card-title h4 text-success"><a href="detail.php?id=<?= $recipe['id'] ?>" class="text-success text-decoration-none"><?= $recipe['title'] ?></a></h2>
-              <p class="card-text mb-1">Penulis : <?= $recipe['user_name'] ?></p>
+              <h5 class="card-title"><a class="text-success text-decoration-none" href="detail.php?id=<?= $recipe['id'] ?>"><?= $recipe['title'] ?></a></h5>
+              <p class="card-text mb-0">Penulis : <?= $recipe['user_name'] ?></p>
               <p class="card-text">Kategori : <?= $recipe['category_name'] ?></p>
             </div>
           </div>
         </div>
         <?php endforeach; ?>
       </div>
-      
       <!-- end content -->
-      
+          
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>

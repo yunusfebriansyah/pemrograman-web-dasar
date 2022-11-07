@@ -1,14 +1,13 @@
 <?php
   require_once 'config.php';
-  $recipe = getDetailRecipes();
+  $recipe = getDetailRecipe();
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= $recipe['title'] ?></title>
+    <title><?= $recipe->title ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
@@ -29,31 +28,20 @@
       </div>
     </nav>
     <!-- end navbar -->
+
     <div class="container">
 
       <!-- content -->
-      <?php if( $recipe != null ) : ?>
-      <img class="w-100 rounded my-4" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="<?= $recipe['title'] ?>" style="height:300px; object-fit: cover;">
-      <h1><?= $recipe['title'] ?></h1>
-      <p class="mb-1">Penulis : <?= $recipe['user_name'] ?></p>
-      <p>Kategori : <?= $recipe['category_name'] ?></p>
-
+      <img class="w-100 mt-3 rounded" style="object-fit: cover; height: 250px;" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="<?= $recipe->title ?>">
+      <h1 class="my-3"><?= $recipe->title ?></h1>
       <h2>Bahan-bahan</h2>
-      <?= $recipe['materials'] ?>
-
+      <?= $recipe->materials ?>
       <h2>Cara Pembuatan</h2>
-      <?= $recipe['procedures'] ?>
-
-      
+      <?= $recipe->procedures ?>
       
       <!-- end content -->
-      
+          
     </div>
-
-    <?php else : ?>
-      <h1>Data tidak tersedia</h1>
-    <?php endif; ?>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>

@@ -17,6 +17,7 @@
 
       <div class="col-12 col-md-6 col-lg-6">
         <select class="form-select form-select-sm" name="category">
+          <option value="">-- Pilih Kategori --</option>
           <?php foreach( $categories as $category ) : ?>
           <option value="<?= $category['id'] ?>" <?php if($category['id'] == $categoryId): echo ' selected'; endif;  ?>><?= $category['name'] ?></option>
           <?php endforeach; ?>

@@ -1,7 +1,7 @@
 <?php
   function setActiveNavbarMenu($requestUrl)
   {
-    if( $requestUrl == $_SERVER["REQUEST_URI"] ) :
+    if( $requestUrl == explode('?', $_SERVER["REQUEST_URI"])[0] ) :
       echo ' active';
     endif;
   }
@@ -17,13 +17,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link <?php setActiveNavbarMenu('/belajar-php/40-templating/index.php*'); setActiveNavbarMenu('/belajar-php/40-templating/'); ?>" href="index.php">Home</a>
+              <a class="nav-link <?php setActiveNavbarMenu('/belajar-php/41-search-and-filter/index.php'); setActiveNavbarMenu('/belajar-php/41-search-and-filter/'); ?>" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php setActiveNavbarMenu('/belajar-php/40-templating/tambah.php'); ?>" href="tambah.php">Buat Resep</a>
+              <a class="nav-link <?php setActiveNavbarMenu('/belajar-php/41-search-and-filter/tambah.php'); ?>" href="tambah.php">Buat Resep</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php setActiveNavbarMenu('/belajar-php/40-templating/kategori.php'); ?>" href="kategori.php">Kategori</a>
+              <a class="nav-link <?php setActiveNavbarMenu('/belajar-php/41-search-and-filter/kategori.php'); ?>" href="kategori.php">Kategori</a>
             </li>
           </ul>
         </div>

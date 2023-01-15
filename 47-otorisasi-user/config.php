@@ -10,6 +10,19 @@
     endif;
   }
 
+  function is_admin()
+  {
+    if( is_login() and isset($_SESSION['admin']) ):
+      if( $_SESSION['admin'] ) :
+        return true;
+      else:
+        return false;
+      endif;
+    else :
+      return false;
+    endif;
+  }
+
   $koneksi = mysqli_connect('localhost', 'root', '', 'share_recipes');
 
   function getAllRecipes()
@@ -221,11 +234,12 @@
     // cek apakah username bener atau enggak
     $result = mysqli_query($koneksi, "SELECT * FROM users WHERE username = '$username'");
     $row = mysqli_fetch_assoc($result);
-    if( $row !== NULL and $row  ) :
+    if( $result !== NULL and $result  ) :
       // cek apakah password bener atau enggak
       if( password_verify($_POST['password'], $row['password']) ) :
         $_SESSION['login'] = true;
         $_SESSION['user_id'] = $row['id'];
+        $_SESSION['admin'] = $row['is_admin'];
         return true;
       else:
         return false;
@@ -252,7 +266,7 @@
       if( $row == NULL ) :
         // username tersedia / username belum kepake
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $query = "INSERT INTO users VALUES (NULL, '$name', '$username', '$password', NULL, 1)";
+        $query = "INSERT INTO users VALUES (NULL, '$name', '$username', '$password', NULL, 0, 1)";
         mysqli_query($koneksi, $query);
         if( mysqli_affected_rows($koneksi) > 0 ) :
           echo "<script>alert('registrasi berhasil. Silahkan login.'); location.href='login.php'</script>";
